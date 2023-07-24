@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <title>contact</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --tran: all 0.3s linear;
+
+        }
+
+        .contact-now {
+            width: 100%;
+            height: 750px;
+            background-color: whitesmoke;
+            border-radius: 10px;
+            padding: 30px;
+
+        }
+
+        .cont1 {
+            color: lightslategray;
+            font-size: 60px;
+        }
+
+        .contact {
+            width: 50%;
+            padding: 12px;
+            margin: 10px;
+            display: flex;
+            width: 90%;
+            height: 500px;
+            background-color: lightgray;
+            border-radius: 20px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+
+        }
+
+        .left-contact {
+            width: 70%;
+            padding: 12px;
+            margin: 10px;
+        }
+
+        .left-contact h2 {
+            font-size: 20px;
+            font-weight: 600px;
+        }
+
+        .right-contact {
+            width: 30%;
+            height: 300px;
+            padding: 35px;
+            margin: 10px;
+            margin-right: 50px;
+            background-color: chocolate;
+            color: white;
+            border-radius: 22px;
+            font-size: 17px;
+
+        }
+
+        input {
+            border: 1px solid #bfbfbf;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 6px;
+            width: 36%;
+        }
+
+        .fas fa-user {
+            float: right;
+        }
+
+        textarea {
+            border: 1px solid #bfbfbf;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 4px;
+            width: 74%;
+            height: 90px;
+            min-width: 74%;
+            max-width: 74%;
+            min-height: 90px;
+            max-height: 160px;
+        }
+
+        button {
+            border-radius: 10px;
+            border: 0px solid #bfbfbf;
+            cursor: pointer;
+            padding: 8px;
+            margin: 4px;
+            width: 74%;
+            background-color: chocolate;
+            color: white;
+            height: 55px;
+            font-size: 18px;
+            position: relative;
+            z-index: 1;
+            transition: var(--tran);
+            overflow: hidden;
+
+        }
+
+        /* sliding hover effect left to right*/
+        button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: darkslateblue;
+            width: 100%;
+            height: 100%;
+            transform: translateX(-100%);
+            transition: var(--tran);
+        }
+
+        button:hover::before {
+            transform: translateX(0);
+            z-index: -1;
+        }
+
+        button:hover {
+            color: white;
+        }
+
+        .phone__number {
+            color: white;
+
+        }
+
+        .right-contact li {
+            text-decoration: none;
+        }
+
+        @media(max-width:600%) {
+            .contact {
+                flex-direction: column;
+            }
+
+            textarea {
+                width: 75%;
+            }
+
+            button {
+                width: 75%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contact-now">
+        <div class="cont1">Contact</div>
+        <div class="contact">
+            <div class="left-contact">
+                <h1>Get In Touch with us</h1>
+                <div class="form-group">
+
+                    <input type="text" placeholder="Name">
+                    <!-- <i class="fas fa-user"></i> -->
+
+                    <input type="text" placeholder="Email">
+                    <!-- <i class="fas fa-envelope"></i> -->
+
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Phone">
+                    <!-- <i class="fas fa-phone-alt"></i> -->
+
+                    <input type="text" placeholder="Select Service">
+                    <!-- <i class="fas fa-globe"></i> -->
+                </div>
+                <div class="message">
+                    <textarea placeholder="Write your message"></textarea>
+                    <!-- <i class="material-icons">message</i> -->
+                </div>
+                <div class="button-area">
+                    <button type="submit">Submit Request &rarr;</button>
+                </div>
+            </div>
+            <div class="right-contact">
+                <h2>Quick Contacts</h2>
+                <p>If you have any questions or need help, feel free to contact with our team.</p>
+                <li>
+                    <a href="tel:+91 98184 70634" class="phone__number">
+                        <i class="fa fa-phone"></i> &nbsp;<span>+91 98 184 70634</span>
+                    </a>
+                </li>
+                <li class="color-body"><b>Corporate Office:</b>&nbsp;C
+                    -304, Noida One KLJ, B-8. Industrial Area, Sector 62, Noida – 201309 Uttar Pradesh (India)
+                </li>
+                <input type="week" name="week" id="camp-week" min="2020-W18" max="2030-W26" required>
+                <input type="time" id="appt" name="appt" min="09:00" max="18:00" required>
+
+                <small>Office hours are 9am to 6pm</small>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <title>video</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --tran: all 0.3s linear;
+            /*for hover slider*/
+        }
+
+        :root {
+            --tran: all 0.3s linear;
+
+        }
+
+
+        .server {
+            display: block;
+            width: 100%;
+            height: 400px;
+            text-align: center;
+            justify-content: center;
+            margin: 5px;
+            padding: 10px;
+            background-image: url(img/bread.webp);
+            background-size: 100%;
+        }
+
+        .server-1 {
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            justify-content: center;
+            width: 40%;
+            height: 350px;
+            margin: 40px;
+            padding: 30px;
+            font-family: Roboto, sans-serif;
+        }
+
+        .server-1 h2 {
+            padding-bottom: 18px;
+            text-align: justify;
+            color: #213360;
+            font-size: 40px;
+            font-family: Roboto, sans-serif;
+        }
+
+        .server-1 p {
+            padding-bottom: 15px;
+            text-align: justify;
+            color: #213360;
+        }
+
+        button.s1 {
+            border-radius: 18px;
+            border: 0px;
+            height: 50px;
+            width: 160px;
+            color: white;
+            background-color: #F26522;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 8px;
+            position: relative;
+            z-index: 1;
+            transition: var(--tran);
+            overflow: hidden;
+        }
+
+        /* sliding hover effect left to right*/
+        button.s1::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: darkslateblue;
+            width: 100%;
+            height: 100%;
+            transform: translateX(-100%);
+            transition: var(--tran);
+        }
+
+        button.s1:hover::before {
+            transform: translateX(0);
+            z-index: -1;
+        }
+
+        button.s1:hover {
+            color: white;
+        }
+
+        button.s1 a {
+            text-decoration: none;
+            color: white;
+        }
+
+        button.s2 {
+            border-radius: 18px;
+            border: 2px solid #F26522;
+            height: 50px;
+            width: 160px;
+            color: #F26522;
+            background-color: white;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            font-size: 16px;
+            margin: 8px;
+        }
+
+        button.s2:hover {
+            background-color: #F26522;
+            color: white;
+        }
+
+        /*footer-server*/
+        .footer-server {
+            display: flex;
+            width: 100%;
+            height: 650px;
+            padding: 15px;
+            background-color: white;
+        }
+
+        .server-12 {
+
+            width: 50%;
+            height: 450px;
+            padding: 10px;
+            margin: 10px;
+            padding-top: 60px;
+            padding-left: 80px;
+            text-align: justify;
+        }
+
+        .server-12 h1 {
+            padding-bottom: 15px;
+            color: #213360;
+            font-size: 40px;
+        }
+
+        .server-12 p {
+            padding-bottom: 15px;
+            font-family: Roboto, sans-serif;
+            color: gray;
+
+        }
+
+        .server-12 ul {
+            color: #213360;
+            font-family: Roboto, sans-serif;
+            font-size: 17px;
+
+        }
+
+        .server-12 ul li {
+            padding-bottom: 15px;
+            list-style: none;
+            line-height: 1 em;
+        }
+
+        .server-23 {
+            width: 40%;
+            padding: 1px;
+            margin: 10px;
+            height: 500px;
+            background-image: url(img/video.webp);
+            border-radius: 14px;
+        }
+
+        .expert-help {
+            text-align: center;
+            padding-bottom: 40px;
+        }
+
+        .s3 {
+            padding: 20px;
+            margin: 0px;
+            background-color: #213360;
+            border-radius: 40px;
+            border: 0px;
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
+            transition: var(--tran);
+            overflow: hidden;
+        }
+
+        .s3::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #F26522;
+            width: 100%;
+            height: 100%;
+            transform: translateX(-100%);
+            transition: var(--tran);
+        }
+
+        .s3:hover::before {
+            transform: translateX(0);
+            z-index: -1;
+        }
+
+        .s3:hover {
+            color: white;
+        }
+
+        .s3 a {
+            font-size: 16px;
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="server">
+        <div class="server-1">
+            <h2>Collaboration And Video Solutions</h2>
+            <p>One important component of running a business is communication. SVS's Collaboration and Video
+                Solutions will resolve your issue and increase your intra- and inter-organizational accessibility.</p>
+            <button class="s1">
+                <a href="contact.html" target="_blank">Contact Us &rarr;</a>
+            </button>
+            <button class="s2">
+                <a>Raise Ticket</a>
+            </button>
+        </div>
+    </div>
+    <div class="footer-server">
+        <div class="server-12">
+            <h1>What We Provide:</h1>
+            <ul>
+                <li><i class="fa fa-check-circle"> &nbsp;</i>Unified Communications - We combine your voice, video,
+                    data, and mobile applications for collaboration.</li>
+                <li><i class="fa fa-check-circle"> &nbsp;</i>Contact Center - We provide results that are focused on the
+                    needs of the customer and strengthen client relationships.</li>
+                <li><i class="fa fa-check-circle"> &nbsp;</i>Conferencing - With omnipresence, we offer security.</li>
+                <li><i class="fa fa-check-circle"> &nbsp;</i>Endpoints - Endpoints solutions are numerous and diverse,
+                    ranging from IP phones and video equipment to web, mobile, and desktop clients.</li>
+                <p>In order to satisfy your expectations, we provide round-the-clock support for all of your business
+                    needs.</p>
+            </ul>
+        </div>
+        <div class="server-23">
+
+        </div>
+    </div>
+    <div class="expert-help">
+        <button class="s3">
+            <a href="contact.html" target="_blank">Get An Expert Help &rarr;</a>
+        </button>
+    </div>
+</body>
+
+</html>

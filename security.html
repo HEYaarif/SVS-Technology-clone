@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <title>server and stroage</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --tran: all 0.3s linear;
+            /*for hover slider*/
+        }
+
+        :root {
+            --tran: all 0.3s linear;
+
+        }
+
+
+        .server {
+            display: block;
+            width: 100%;
+            height: 400px;
+            text-align: center;
+            justify-content: center;
+            margin: 5px;
+            padding: 10px;
+            background-image: url(img/bread.webp);
+            background-size: 100%;
+        }
+
+        .server-1 {
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            justify-content: center;
+            width: 40%;
+            height: 350px;
+            margin: 40px;
+            padding: 30px;
+            font-family: Roboto, sans-serif;
+        }
+
+        .server-1 h2 {
+            padding-bottom: 18px;
+            text-align: justify;
+            color: #213360;
+            font-size: 35px;
+            font-family: Roboto, sans-serif;
+        }
+
+        .server-1 p {
+            padding-bottom: 15px;
+            text-align: justify;
+            color: #213360;
+        }
+
+        button.s1 {
+            border-radius: 18px;
+            border: 0px;
+            height: 50px;
+            width: 160px;
+            color: white;
+            background-color: #F26522;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 8px;
+            position: relative;
+            z-index: 1;
+            transition: var(--tran);
+            overflow: hidden;
+        }
+
+        /* sliding hover effect left to right*/
+        button.s1::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: darkslateblue;
+            width: 100%;
+            height: 100%;
+            transform: translateX(-100%);
+            transition: var(--tran);
+        }
+
+        button.s1:hover::before {
+            transform: translateX(0);
+            z-index: -1;
+        }
+
+        button.s1:hover {
+            color: white;
+        }
+
+        button.s1 a {
+            text-decoration: none;
+            color: white;
+        }
+
+        button.s2 {
+            border-radius: 18px;
+            border: 2px solid #F26522;
+            height: 50px;
+            width: 160px;
+            color: #F26522;
+            background-color: white;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            font-size: 16px;
+            margin: 8px;
+        }
+
+        button.s2:hover {
+            background-color: #F26522;
+            color: white;
+        }
+
+        /*footer-server*/
+        .footer-server {
+            display: flex;
+            width: 100%;
+            height: 650px;
+            padding: 15px;
+            background-color: white;
+        }
+
+        .server-12 {
+
+            width: 50%;
+            height: 450px;
+            padding: 10px;
+            margin: 10px;
+            padding-top: 60px;
+            padding-left: 80px;
+            text-align: justify;
+        }
+
+        .server-12 h1 {
+            padding-bottom: 15px;
+            color: #213360;
+            font-size: 40px;
+        }
+
+        .server-12 p {
+            padding-bottom: 15px;
+            font-family: Roboto, sans-serif;
+            color: gray;
+
+        }
+
+        .server-12 ul {
+            color: #213360;
+            font-family: Roboto, sans-serif;
+            font-size: 17px;
+
+        }
+
+        .server-12 ul li {
+            padding-bottom: 10px;
+            list-style: none;
+            line-height: 1 em;
+
+        }
+
+
+        .server-23 {
+            width: 40%;
+            padding: 1px;
+            margin: 10px;
+            height: 500px;
+            background-image: url(img/securityaudit.webp);
+            border-radius: 14px;
+        }
+
+        /*footer-storage*/
+        .footer-storage {
+            display: flex;
+            width: 100%;
+            height: 620px;
+            padding: 15px;
+            background-color: white;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+
+        .storage-12 {
+            width: 50%;
+            padding: 1px;
+            margin: 10px;
+            height: 500px;
+            background-image: url(img/securityaudit2.webp);
+            border-radius: 14px;
+
+        }
+
+        .storage-23 {
+            width: 50%;
+            height: 650px;
+            padding: 10px;
+            margin: 10px;
+            text-align: justify;
+        }
+
+        .storage-23 h1 {
+            padding-bottom: 15px;
+            color: #213360;
+            font-size: 40px;
+        }
+
+        .storage-23 h2 {
+            padding-bottom: 15px;
+            color: #213360;
+            font-family: Roboto, sans-serif;
+        }
+
+        .storage-23 p {
+            padding-bottom: 15px;
+            font-family: Roboto, sans-serif;
+            color: gray;
+
+        }
+
+        .storage-23 ul {
+            color: #213360;
+            font-family: Roboto, sans-serif;
+            font-size: 17px;
+
+        }
+
+        .storage-23 ul li {
+            padding-bottom: 10px;
+            list-style: none;
+            line-height: 1 em;
+
+        }
+
+        .expert-help {
+            text-align: center;
+            padding-bottom: 40px;
+        }
+
+        .s3 {
+            padding: 20px;
+            margin: 0px;
+            background-color: #213360;
+            border-radius: 40px;
+            border: 0px;
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
+            transition: var(--tran);
+            overflow: hidden;
+        }
+
+        .s3::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #F26522;
+            width: 100%;
+            height: 100%;
+            transform: translateX(-100%);
+            transition: var(--tran);
+        }
+
+        .s3:hover::before {
+            transform: translateX(0);
+            z-index: -1;
+        }
+
+        .s3:hover {
+            color: white;
+        }
+
+        .s3 a {
+            font-size: 16px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .endpoint {
+            height: 450px;
+            text-align: justify;
+            padding: 16px;
+            margin: 0 auto;
+            width: 800px;
+
+        }
+
+        .point h1 {
+            color: #213360;
+            font-size: 30px;
+            padding-bottom: 20px;
+            font-family: Roboto, sans-serif;
+        }
+
+        .point ul li {
+            font-family: Roboto, sans-serif;
+            padding-bottom: 16px;
+            color: #213360;
+            list-style: none;
+            font-size: 17px;
+            font-weight: 6px;
+
+        }
+
+        .point ul li a {
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="server">
+        <div class="server-1">
+            <h2>Information Security</h2>
+            <p>SVS offers solutions for all information security-related issues, protecting your private information
+                from outside threats and intrusions. Your data and network are made sound, safe, and effective by
+                the specialists at SVS Technologies, who have in-depth knowledge and pertinent expertise. With our
+                services, you can safeguard your data and make it dependable, all while reducing your security worries.
+            </p>
+            <button class="s1">
+                <a href="contact.html" target="_blank">Contact Us &rarr;</a>
+            </button>
+            <button class="s2">
+                <a>Raise Ticket</a>
+            </button>
+        </div>
+    </div>
+    <div class="footer-server">
+        <div class="server-12">
+            <h1>The Information Security Services We Offer Are Listed Below.</h1>
+            <ul>
+                <li><i class="fa fa-check-circle"> &nbsp;</i>Data Protection & Privacy</li>
+                <li><i class="fa fa-check-circle"> &nbsp;</i>Cyber and Infrastructure Security</li>
+                <li><i class="fa fa-check-circle"> &nbsp;</i>Security Assurance</li>
+                <li><i class="fa fa-check-circle"> &nbsp;</i>Security audit - Governance, Risk & Compliance</li>
+                <li><i class="fa fa-check-circle"> &nbsp;</i>Identity and Asset Management</li>
+                <li><i class="fa fa-check-circle"> &nbsp;</i>AMP for Endpoint</li>
+            </ul>
+        </div>
+        <div class="server-23">
+
+        </div>
+    </div>
+    <div class="footer-storage">
+        <div class="storage-12">
+
+        </div>
+        <div class="storage-23">
+            <h1>Security Audits</h1>
+            <p>A security audit evaluates a company's information system by confirming that its security procedures,
+                product and service compliance are in place. It examines the software, user procedures, physical
+                accessibility, and security of company devices.
+                These rules look at how security is handled within the company, including how users share data, how
+                risks to the network are analysed for their root causes, and whether or not suitable logs are being kept
+                for all user actions on the network.</p>
+            <h2>Key Findings From Security Audits Include:</h2>
+            <ul>
+                <li><i class="fa fa-check-circle"> &nbsp;</i>If the password is easily hackable or not?</li>
+                <li><i class="fa fa-check-circle"> &nbsp;</i>If proper logs are maintained for every user activity or
+                    not?</li>
+                <li><i class="fa fa-check-circle"> &nbsp;</i>If the logs are checked on a timely basis or not?</li>
+                <li><i class="fa fa-check-circle"> &nbsp;</i>If the operating systems match the company security
+                    policies or not?</li>
+                <li><i class="fa fa-check-circle"> &nbsp;</i>If there are any suspicious applications running within the
+                    network or not?</li>
+                <li><i class="fa fa-check-circle"> &nbsp;</i>What back up measures are taken and when were they last
+                    taken?</li>
+                <li><i class="fa fa-check-circle"> &nbsp;</i>What cryptographic tools have been used?</li>
+                <li><i class="fa fa-check-circle"> &nbsp;</i>If there are any company regulated documents for compliance
+                    or not?</li>
+                <li><i class="fa fa-check-circle"> &nbsp;</i>What are the flaws in the network, what access is available
+                    to the company users which shouldn’t be available?</li>
+            </ul>
+            <p>Our team specialises in carrying out network audits and security audits by evaluating whether the network
+                setup is in line with the compliance/policies of the firm or not.</p>
+
+        </div>
+    </div>
+    <div class="endpoint">
+        <div class="point">
+            <h1>Endpoint Security</h1>
+            <ul>
+                <li><i class="fa fa-check-circle"> &nbsp;</i>In order to access the corporate network, each device must
+                    adhere to a set of standards, which is known as endpoint security. Endpoints may include devices
+                    like desktops, laptops, mobile phones, tablets, etc.</li>
+                <li><i class="fa fa-check-circle"> &nbsp;</i>Endpoint security in information security refers to
+                    safeguarding business assets by securing corporate devices, as each device with network access or
+                    remote network entry creates a possible point of entry for security threats. Endpoint security is
+                    designed to safeguard every single networked device.</li>
+                <li><i class="fa fa-check-circle"> &nbsp;</i>A centrally controlled server maintains the security of all
+                    your endpoint devices in the client/server architecture of endpoint security. However, if the
+                    endpoint is connecting to the network remotely, the server programme verifies the user credentials
+                    and checks the corporate assets to ensure that the device complies with the company's security
+                    regulations before granting access to the corporate network. Devices that violate business policies
+                    will be placed in a different VLAN.</li>
+                <li><i class="fa fa-check-circle"> &nbsp;</i>Simple form endpoint security in personal firewalls and
+                    internet security proxy etc.
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="expert-help">
+        <button class="s3">
+            <a href="contact.html" target="_blank">Get An Expert Help &rarr;</a>
+        </button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,588 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+/* CSS variables*/
+:root {
+  --navbar-height: 60px;
+}
+
+.top-navbar {
+  display: flex;
+  height: 75px;
+  background-color: darkblue;
+  color: white;
+}
+
+.top1 {
+  display: flex;
+  padding: 20px;
+  width: 75%;
+  text-align: center;
+}
+
+.top1 p {
+  padding: 7px;
+}
+
+.request {
+  height: 65px;
+  width: 170px;
+  padding: 7px;
+  border-radius: 10px;
+  color: #F26522;
+  background-color: white;
+  cursor: pointer;
+
+}
+
+.top2 {
+  width: 25%;
+  padding: 13px;
+  margin: 11px;
+  text-align: center;
+}
+
+.top2 a {
+  padding: 5px;
+  margin: 4px;
+  color: white;
+  background-color: #F26522;
+  line-height: 30px;
+  border-radius: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Navigation bar*/
+#navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  overflow: hidden;
+  /* position: fixed;
+  background-color: white;
+  width: 100%; */
+}
+
+/* Navigation Bar: Logo and Image*/
+
+#logo {
+  margin: 10px 34px;
+}
+
+#logo img {
+  height: 70px;
+  margin: 20px 35px;
+}
+
+/* Navigation Bar: List Styling*/
+#navbar ul {
+  display: flex;
+  width: 100%;
+}
+
+#navbar::before {
+  content: "";
+  background-color: white;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+#navbar ul li {
+  color: white;
+  list-style: none;
+  font-size: 1.3rem;
+  text-align: justify;
+  justify-content: center;
+}
+
+#navbar ul li a {
+  color: white;
+  color: darkslateblue;
+  display: block;
+  padding: 3px 22px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.5s ease-in;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+
+}
+
+#navbar ul li a:hover {
+  color: #F26522;
+  background-color: white;
+
+}
+
+.b3 {
+  text-align: center;
+  align-items: center;
+  border-radius: 12px;
+  background-color: #F26522;
+  text-align: center;
+  color: white;
+  float: right;
+  margin-right: 35px;
+  padding: 10px;
+  padding-top: 10px;
+  width: 265px;
+  height: 65px;
+  cursor: pointer;
+  justify-content: center;
+  border: 0px;
+}
+
+.b3:hover {
+  background-color: darkblue;
+}
+
+/* Home section*/
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#services {
+  margin: 34px;
+  display: flex;
+  text-align: justify;
+  font-family: Roboto, sans-serif;
+}
+
+.box p {
+  color: gray;
+}
+
+.box h2 {
+  text-align: center;
+  padding: 10px 10px;
+}
+
+.quotelink {
+  text-align: center;
+  color: #F26522;
+  padding-left: 35px;
+  text-decoration-line: none;
+}
+
+#services.box {
+  border: 2px solid brown;
+  margin: 3px 6px;
+  background-color: lightblue;
+}
+
+#services.box img {
+  height: 160px;
+  margin: auto;
+  display: block;
+}
+
+.services-container {
+  display: flex;
+}
+
+/* clients services*/
+#client-section {
+  height: 450px;
+  margin: 50px;
+}
+
+#client-section h1 {
+  text-align: center;
+}
+
+#clients {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#client-item {
+  padding: 34px;
+}
+
+#clients img {
+  height: 220px;
+  width: 300px;
+  margin: 5px;
+  padding: 20px;
+  border-radius: 45px;
+}
+
+#clients img:hover {
+  background-color: gainsboro;
+}
+
+#clients h3 {
+  text-align: center;
+}
+
+/* partner section*/
+#partners-section {
+  height: 300px;
+  margin: auto;
+}
+
+#partners-section h1 {
+  text-align: center;
+}
+
+#partner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#partner-item {
+  padding: 40px;
+}
+
+#partner img {
+  height: 150px;
+  width: 200px;
+  margin: 20px;
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid grey;
+}
+
+#partner img:hover {
+  background-color: whitesmoke;
+  box-shadow: 25px 0px 5px lightgray;
+}
+
+/* customer section*/
+#customer-section h1 {
+  text-align: center;
+
+}
+
+#customers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#customers img {
+  height: auto;
+  width: auto;
+  padding: 12px;
+  margin: 15px;
+  border: 1px solid gray;
+}
+
+.heading__desc {
+  font-family: Roboto, sans-serif;
+  color: gray;
+}
+
+/* split screen*/
+.split-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.left,
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0a58ca;
+  height: 700px;
+  width: 50%;
+}
+
+.copy {
+  color: white;
+  text-align: justify;
+  width: 75%;
+  font-family: Roboto, sans-serif;
+}
+
+@media screen and (min-width:900px) {
+  .split-section {
+    flex-direction: row;
+    height: 100%;
+  }
+
+  .split-screen {
+    display: flex;
+
+    height: 700px;
+  }
+}
+
+#contact {
+  background-color: white;
+  color: black;
+  padding: 16px 12px;
+  border-radius: 10px;
+  height: 450px;
+  font-family: Roboto, sans-serif;
+}
+
+#contact h2 {
+  padding-top: 16px;
+}
+
+#contact p {
+  color: gray;
+  padding-top: 25px;
+}
+
+#contact-box {
+  display: flex;
+  height: 300px;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact-box input {
+  border-radius: 20px;
+  border: 2px solid gray;
+  margin: 6px;
+  padding: 6px;
+  font-size: 0.9rem;
+  font-family: Roboto, sans-serif;
+}
+
+.bg-white {
+  padding: 12px;
+}
+
+.bg-white h3 {
+  padding-bottom: 14px;
+}
+
+#contact-box label {
+  font-size: 1.1rem;
+  font-family: serif;
+
+}
+
+.form-group {
+  display: flex;
+}
+
+
+/* button*/
+input[type=Submitus] {
+  background-color: #F26522;
+  color: white;
+  border-radius: 30px;
+  border: none;
+  text-align: center;
+  padding: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  width: 100%;
+  font-size: large;
+  letter-spacing: 0.5px;
+}
+
+input:hover {
+  background-color: darkblue;
+  color: white;
+}
+
+.b1 {
+  background-color: white;
+  color: #F26522;
+  border-radius: 30px;
+  border: none;
+  padding: 20px;
+  margin: 15px;
+  cursor: pointer;
+  font-size: large;
+  letter-spacing: 0.5px;
+  width: 49%;
+  display: flex;
+}
+
+.b2 {
+  background-color: white;
+  color: #F26522;
+  border-radius: 30px;
+  border: none;
+  padding: 20px;
+  margin: 15px;
+  cursor: pointer;
+  font-size: large;
+  letter-spacing: 0.5px;
+  width: 49%;
+  display: flex;
+
+}
+
+.b2 a {
+  text-decoration: none;
+  color: #F26522;
+}
+
+.b2:hover a {
+
+  background-color: #F26522;
+  color: white;
+}
+
+.right-form {
+  display: flex;
+  width: 100%;
+
+}
+
+.b1:hover {
+  background-color: #F26522;
+  color: white;
+}
+
+.b2:hover {
+  background-color: #F26522;
+  color: white;
+
+}
+
+/* Footer section*/
+.footer {
+  background-color: darkblue;
+  padding: 10px 10px;
+}
+
+.ft-container {
+  height: 500px;
+}
+
+ul {
+  list-style: none;
+  color: darkgray;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+ul li:hover {
+  color: #F9B403;
+  padding-left: 8px;
+}
+
+.row12 {
+  display: flex;
+  flex-wrap: wrap;
+  height: 450px;
+}
+
+.footer-col {
+  width: 25%;
+  padding: 20px 20px;
+  margin-top: 100px;
+  color: white;
+  text-align: justify;
+  font-family: Roboto, sans-serif;
+
+}
+
+.footer-col h4 {
+  font-size: x-large;
+  color: white;
+  margin-bottom: 12px;
+  padding-left: 31px;
+}
+
+.footer-col ul li a {
+  display: block;
+  text-decoration: none;
+  padding: 5px;
+  color: darkgray;
+}
+
+.footer-2 {
+  background-color: white;
+  color: black;
+  padding: 15px;
+  border-radius: 10px;
+  height: 330px;
+  width: 310px;
+}
+
+.color-body {
+  padding-top: 16px;
+}
+
+.social-icons {
+  display: flex;
+  padding: 4px;
+  margin-top: 20px;
+}
+
+.social-icons p {
+  padding-right: 8px;
+}
+
+.social-icons a {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  background-color: #F26522;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  justify-content: center;
+  line-height: 30px;
+  border-radius: 50%;
+  color: white;
+  transition: all 0.5s ease;
+
+}
+
+.social-icons a:hover {
+  background-color: #0a58ca;
+}
+
+/*Responsive*/
+@media(max-width:767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+
+@media(max-width:574px) {
+  .footer-col {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+/* secondary footer*/
+.footer-secondary {
+  height: 125px;
+  padding-top: 40px;
+  text-align: center;
+}
+
+.list-unstyled li a {
+  text-decoration: none;
+  padding: 7px;
+  color: gray;
+}
+
+.b1 a {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.b2 a {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
